@@ -273,8 +273,8 @@
         .advantages__item-title {
             color: $green;
         }
-        .advantages__item-images{
-            g{
+        .advantages__item-images {
+            g {
                 fill: #fff;
             }
         }
@@ -289,7 +289,6 @@
         align-items: center;
         margin: 0 auto 30px;
         transition: all 0.3s;
-        
     }
     &-title {
         margin-bottom: 25px;
@@ -314,14 +313,14 @@
     }
 }
 .icosvg-3 {
-    svg{
-     width: 86px;   
+    svg {
+        width: 86px;
     }
 }
 
 // end advantages
 // start author
-.author{
+.author {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -329,7 +328,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    &__box{
+    &__box {
         max-width: 650px;
         width: 100%;
         min-height: 215px;
@@ -338,17 +337,17 @@
         align-items: center;
         background-color: $green;
     }
-    &__title{
-       font-size: 30px;
-       line-height: 30px;
-       color: #fff; 
-       margin-right: 45px;
-       max-width: 265px;
-       span{
-           @include f700;
-       }
+    &__title {
+        font-size: 30px;
+        line-height: 30px;
+        color: #fff;
+        margin-right: 45px;
+        max-width: 265px;
+        span {
+            @include f700;
+        }
     }
-    &__link{
+    &__link {
         font-size: 18px;
         line-height: 36px;
         padding: 14px 40px;
@@ -356,3 +355,33 @@
     }
 }
 // end author
+// start tutorial
+.tutorial {
+    padding: 70px 0px 120px;
+    &__inner {
+        display: flex;
+        justify-content: space-between;
+    }
+    &__item {
+        max-width: 370px;
+        width: 100%;
+    }
+}
+.tutorial__item {
+    &-images {
+        min-height: 270px;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    &-title {
+        background-color: #f8f8f8;
+        font-size: 24px;
+        text-align: center;
+        @include f700;
+        padding: 30px 10px;
+        text-align: center;
+        color: $bg;
+    }
+}
+// end tutorial
