@@ -97,6 +97,7 @@
     }
 }
 .basket {
+    margin-right: 20px;
     span {
         background-color: $green;
     }
@@ -111,7 +112,6 @@
     }
 }
 .user {
-    margin-left: 20px;
     margin-right: 25px;
     padding-right: 20px;
     position: relative;
@@ -195,6 +195,7 @@
     top: 50px;
     right: 0;
     transition: all 0.3s;
+    z-index: 5;
     // transition: border-width 0s linear;
 }
 .basket__box,
@@ -206,7 +207,7 @@
     &:hover {
         height: 90px;
         margin-top: 55px;
-        .header__circle::before{
+        .header__circle::before {
             color: $bg;
         }
         .circle__menu {
@@ -217,7 +218,7 @@
             overflow: auto;
             height: auto;
         }
-        .circle__item{
+        .circle__item {
             padding: 23px;
             border-width: 1px;
         }
@@ -233,7 +234,7 @@
     width: 269px;
     position: relative;
     transition: all 0.3s;
-    &::before{
+    &::before {
         position: absolute;
         top: 27px;
         right: 28px;
@@ -300,12 +301,15 @@
         border-radius: 50%;
     }
 }
-.circle__info{
+.circle__info {
     line-height: 18px;
 }
-.icons-color::before{
+.icons-color::before {
     color: $tomato;
-
+}
+.header__btn-menu,
+.menu__btn{
+    display: none;
 }
 .search {
     background-repeat: no-repeat;
@@ -798,3 +802,5 @@
     }
 }
 // end footer
+
+@import "media";
