@@ -6,42 +6,61 @@ html {
 *::after {
     box-sizing: inherit;
 }
-a{
+html,
+body {
+    height: 100%;
+    position: relative;
+    overflow-x: hidden;
+}
+a {
     display: inline-block;
     text-decoration: none;
     color: $text;
 }
 ul,
-li{
+li {
     margin: 0;
     padding: 0;
     list-style: none;
 }
-body{
+body {
     font-family: "Roboto-Regular", sans-serif;
     font-weight: 400;
     font-size: 15px;
     line-height: 24px;
     color: $text;
-    overflow-x: hidden;
 }
-.container{
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+}
+.content {
+    flex: 1 0 auto;
+}
+.footer {
+    flex: 0 0 auto;
+}
+.container {
     max-width: 1200px;
     margin: auto;
     padding: 0 15px;
 }
-.container-fluid{
+.container-fluid {
     max-width: 100%;
     margin: auto;
     padding: 0 30px;
 }
 
-@media(max-width: 720px){
-    .container-fluid{
+@media (max-width: 720px) {
+    .container-fluid {
         padding: 0 15px;
     }
 }
-.title{
+.page-content {
+    background-color: $grey;
+}
+.title {
     color: $bg;
     font-size: 36px;
     @include f700;
@@ -49,16 +68,45 @@ body{
     text-align: center;
     margin-bottom: 30px;
 }
-.rate-star{
+.rate-star {
     display: inline-block;
     margin-right: 13px;
 }
-.angle-right{
+.breadcrumbs {
+    &__inner {
+      padding: 45px 0px 40px;
+    }
+    &__list {
+      li {
+        display: inline-block;
+        position: relative;
+        & + li {
+          padding-left: 24px;
+          &::before {
+            content: "-";
+            position: absolute;
+            left: 8px;
+            color: $green;
+          }
+        }
+        &:last-child {
+          a,
+          span {
+            color: $bg;
+          }
+        }
+      }
+      a {
+        color: #b0bec5;
+      }
+    }
+  }
+.angle-right {
     position: relative;
     padding-left: 15px;
-    &::before{
+    &::before {
         content: "\f105";
-        font-family: 'icomoon';
+        font-family: "icomoon";
         position: absolute;
         color: $green;
         left: 0;
